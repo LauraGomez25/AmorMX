@@ -82,7 +82,7 @@
                 <div class="field">
                     <label for="Tipo">Estado:</label>
                     <select type="select" name="tipo" id="Tipo" required>
-                        <option value="Seleccione">Seleccione</option>
+                        <option value="">Seleccione</option>
                         <option value="Seleccione">En preparacion</option>
                         <option value="Seleccione">Preparado</option>
                         <option value="Seleccione">Despachado</option>

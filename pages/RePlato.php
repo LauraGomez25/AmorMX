@@ -73,7 +73,7 @@
                  <div class="field">
                     <label for="Tipo">Categoria:</label>
                     <select type="select" name="tipo" id="Tipo" required>
-                        <option value="Seleccione">Seleccione</option>
+                        <option value="">Seleccione</option>
                     </select>
                 </div>
 

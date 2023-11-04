@@ -81,7 +81,7 @@
                 <div class="field">
                     <label for="Tipo">Metodo de pago:</label>
                     <select type="select" name="tipo" id="Tipo" required>
-                        <option value="Seleccione">Seleccione</option>
+                        <option value="">Seleccione</option>
                         <option value="Seleccione">Efectivo</option>
                         <option value="Seleccione">Tarjeta</option>
                         <option value="Seleccione">Transaccion</option>
