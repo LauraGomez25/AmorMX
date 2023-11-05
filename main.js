@@ -37,33 +37,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ---------------------------------------------------------------
 
-
-function mostrarVistaPrevia() {
-  var archivoInput = document.getElementById('fil_foto');
-  var vistaPrevia = document.getElementById('vista_previa');
-  var archivo = archivoInput.files[0];
-
-  if (archivo) {
+  function mostrarVistaPrevia() {
+    var archivoInput = document.getElementById('fil_foto');
+    var vistaPrevia = document.getElementById('vista_previa');
+    var archivo = archivoInput.files[0];
+  
+    if (archivo) {
       var lector = new FileReader();
-
-      lector.onload = function(e) {
-          vistaPrevia.src = e.target.result;
-          vistaPrevia.style.cursor = 'pointer';
-          vistaPrevia.onclick = function() {
-              abrirImagenEnVentana(e.target.result);
-          };
+  
+      lector.onload = function (e) {
+        vistaPrevia.src = e.target.result;
+        vistaPrevia.style.cursor = 'pointer';
+        vistaPrevia.onclick = function () {
+          abrirImagenEnVentana(e.target.result);
+        };
       };
-
+  
       lector.readAsDataURL(archivo);
+    }
   }
-}
-
-function abrirImagenEnVentana(url) {
-  var ventanaNueva = window.open('', 'Imagen en Grande', 'width=800, height=600');
-  if (ventanaNueva) {
+  
+  function abrirImagenEnVentana(url) {
+    var ventanaNueva = window.open('', 'Imagen en Grande', 'width=800, height=600');
+    if (ventanaNueva) {
       ventanaNueva.document.write('<img src="' + url + '" alt="Imagen en Grande" style="max-width: 100%; max-height: 100%;">');
-  } else {
+    } else {
       alert('El navegador bloqueó la ventana emergente. Habilita las ventanas emergentes para ver la imagen en grande.');
+    }
   }
-}
-

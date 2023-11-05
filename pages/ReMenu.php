@@ -6,7 +6,7 @@
     <title>Registrar Menu</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/main2.css'>
-    <script src='main.js'></script>
+    <script src='../main.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
@@ -67,13 +67,13 @@
                 </div><br>
 
                 <div class="field">
-                    <label for="Tipo">Imagen:</label>
-                    <input type = "file" name="fil_foto" id="fil_foto">
-                </div>
-                <div class="vista-previa">
+                        <label for="fil_foto">Imagen:</label>
+                        <input type="file" name="fil_foto" id="fil_foto" onchange="mostrarVistaPrevia()">
+                    </div>
+                    <div class="vista-previa">
                         <img id="vista_previa" src="#" alt="Vista Previa de la Imagen"
                             style="max-width: 300px; max-height: 300px;">
-                    </div>
+                    </div>s
 
                     
 
