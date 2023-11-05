@@ -42,7 +42,7 @@
             </a></li>
 
 
-        <li class="right"><a href="pages/Administrador.php" class="icon-link">
+        <li class="right"><a href="../pages/Administrador.php" class="icon-link">
                 <i class="fa-solid fa-right-to-bracket"></i>
                 Salir</a></li>
     </ul>
