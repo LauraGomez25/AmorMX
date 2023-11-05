@@ -60,25 +60,23 @@
                 <h2>Visualizar Plato</h2>
                  <hr><br>
 
+                 <div class="field">
+                    <label for="id">Numero de mesa:</label>
+                    <label for="id">Predeterminado</label>
+                </div><br>
                 
                  <div class="field">
                     <label for="name">Nombre del Plato:</label>
-                    <input type="text" name="name" id="name" required>
+                    <label for="id">Predeterminado</label>
                 </div><br>
 
-                <div class="field">
-                    <label for="id">Numero de mesa:</label>
-                    <input type="number" name="id" id="id" required>
-                </div><br>
+                
 
                  <div class="field">
                     <label for="id">Cantidad:</label>
-                    <input type="number" name="id" id="id" required>
+                    <label for="id">Predeterminado</label>
                 </div>
 
-                <div class="field">
-                    <button type="submit">Categoria</button>
-                </div>
 
                 <div class="field">
                     <label for="Tipo">Estado:</label>
