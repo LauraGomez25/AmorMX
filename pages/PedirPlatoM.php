@@ -36,16 +36,16 @@
 
 
     <ul class="menu">
-        <li class="left"><a href="../Index.html"class="icon-link">
+        <li class="left"><a href=""class="icon-link">
                 <i class="fas fa-home" ></i>
-                Home
+                Mesero
             </a></li>
 
 
-            <li class="left"><a href="../Administrador.php"class="icon-link">
-                <i class="fas fa-home" ></i>
-                Admin
-            </a></li>
+            <li class="right">
+            <a href="cerrar_sesion.php" class="icon-link">
+                <i class="fa-solid fa-right-to-bracket" ></i>
+                Log out</a></li>
     </ul>
 
     <div id="services" class="main-container">

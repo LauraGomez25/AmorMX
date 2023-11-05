@@ -1,3 +1,14 @@
+<?php
+    require('../conexion.php');
+
+    session_start();
+
+    if(!isset($_SESSION["id_usuario"])) {
+		header("Location: Acceso.php");
+	}
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,15 +48,16 @@
     
     
         <ul class="menu">
-            <li class="left"><a href="../pages/Acceso.html" class="icon-link">
+            <li class="left"><a href="" class="icon-link">
                     <i class="fas fa-home"></i>
-                    Home
+                    Chef
                 </a></li>
     
     
-            <li class="right"><a href="../pages/Administrador.php" class="icon-link">
-                    <i class="fa-solid fa-right-to-bracket" ></i>
-                    Chef</a></li>
+                <li class="right">
+            <a href="cerrar_sesion.php" class="icon-link">
+                <i class="fa-solid fa-right-to-bracket" ></i>
+                Log out</a></li>
         </ul>
 
 

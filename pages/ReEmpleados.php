@@ -8,7 +8,6 @@
     <link rel='stylesheet' type='text/css' media='screen' href='../css/main2.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src='main.js'></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
 <body>
@@ -38,9 +37,9 @@
 
 
     <ul class="menu">
-        <li class="left"><a href="../Index.html" class="icon-link">
+        <li class="left"><a href="" class="icon-link">
                 <i class="fas fa-home"></i>
-                Home
+                Administrador
             </a></li>
 
 
@@ -53,7 +52,7 @@
         <div class="container">
             <section class="main-section">
 
-                <form action="GuardarEmp.php" method="POST">
+                <form action="../Backend/GuardarEmp.php" method="POST">
 
                     <h2>Registro Empleados</h2>
                     <hr><br>

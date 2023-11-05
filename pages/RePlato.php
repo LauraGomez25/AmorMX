@@ -36,15 +36,15 @@
 
 
     <ul class="menu">
-        <li class="left"><a href="../Index.html" class="icon-link">
+    <li class="left"><a href="" class="icon-link">
                 <i class="fas fa-home"></i>
-                Home
+                Administrador
             </a></li>
 
 
-        <li class="right"><a href="../pages/Administrador.php" class="icon-link">
+        <li class="right"><a href="pages/Administrador.php" class="icon-link">
                 <i class="fa-solid fa-right-to-bracket"></i>
-                Admin</a></li>
+                Salir</a></li>
     </ul>
     
 
@@ -53,7 +53,7 @@
         <div class="container">
             <section class="main-section">
 
-                <form action="show.php" method="post">
+                <form action="GuardarPlato.php" method="POST">
 
                 
                 <h2>Registro Plato</h2>

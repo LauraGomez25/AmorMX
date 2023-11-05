@@ -50,7 +50,7 @@
             
         } else {
             echo "<script>alert('Datos incorrectos');</script>";
-            //header("Refresh:0;url=http://localhost/AmorMX/pages/Acceso.php");
+            header("Refresh:0;url=http://localhost/AmorMX/pages/Acceso.php");
         }
         
         // Cierra la conexión
@@ -104,10 +104,6 @@
             </a></li>
 
 
-        <li class="right">
-            <a href="../pages/Administrador.php" class="icon-link">
-                <i class="fa-solid fa-right-to-bracket" ></i>
-                Admin</a></li>
     </ul>
 
 

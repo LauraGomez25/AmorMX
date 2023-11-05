@@ -50,9 +50,9 @@
 
 
     <ul class="menu">
-        <li class="left"><a href="../Index.html" class="icon-link">
+        <li class="left"><a href="" class="icon-link">
                 <i class="fas fa-home"></i>
-                Home
+                Administrador
             </a></li>
 
 

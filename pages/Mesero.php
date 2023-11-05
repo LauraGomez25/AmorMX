@@ -46,9 +46,9 @@
 
 
     <ul class="menu">
-        <li class="left"><a href="../pages/Acceso.html" class="icon-link">
+        <li class="left"><a href="" class="icon-link">
                 <i class="fas fa-home" ></i>
-                Home
+                Mesero
             </a></li>
 
 

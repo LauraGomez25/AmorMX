@@ -4,8 +4,9 @@
     require('../conexion.php');
 
     //recuperar la informacion del formulario html ReEmpleados
+    $nombre = $_POST['nombre'];
+    $precio = $_POST['precio'];
     $categoria = $_POST['categoria'];
-    $estado = "A";
     
     // Procesa la imagen
     $rutaCarpeta = "../fotos/";
@@ -14,7 +15,7 @@
 
 
     //preparar sql
-    $sql = "insert into categorias (nombre_categoria, estado, ruta) values('$categoria','$estado','$rutaImagen');";
+    $sql = 
 
      // Execute sql
      $result = pg_query($conn, $sql);
@@ -30,12 +31,6 @@
             echo "Error al subir la imagen.";
         }
 
-    }
-
-    
-
-    
-
-    
+    }  
 
 ?>
