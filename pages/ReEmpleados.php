@@ -53,7 +53,7 @@
         <div class="container">
             <section class="main-section">
 
-                <form action="show.php" method="post">
+                <form action="GuardarEmp.php" method="POST">
 
                     <h2>Registro Empleados</h2>
                     <hr><br>
@@ -65,7 +65,7 @@
 
                     <div class="field">
                         <label for="id">Identificacion:</label>
-                        <input type="number" name="id" id="id" required>
+                        <input type="number" name="dni" id="id" required>
                     </div><br>
 
 
@@ -92,12 +92,12 @@
 
                     <div class="field">
                         <label for="Tipo">Rol:</label>
-                        <select type="select" name="tipo" id="Tipo" required>
+                        <select type="select" name="rol" id="Tipo" required>
                             <option value="">Seleccione</option>
-                            <option value="Administrador">Administrador</option>
-                            <option value="Mesero">Mesero</option>
-                            <option value="Chef">Chef</option>
-                            <option value="Cajero">Cajero</option>
+                            <option value="1">Administrador</option>
+                            <option value="2">Mesero</option>
+                            <option value="3">Chef</option>
+                            <option value="4">Cajero</option>
                         </select>
                     </div>
 

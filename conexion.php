@@ -1,20 +1,19 @@
 <?php
 	$host = "localhost";
 	$port = "5432"; // Puerto predeterminado de PostgreSQL
-	$dbname = "nombre_de_base_de_datos";
-	$user = "nombre_de_usuario";
-	$password = "contraseña";
+	$dbname = "AmorMX";
+	$user = "postgres";
+	$password = "postgres";
 
 	// Connect to db
-	$dbconn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
+	$conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
 
-	if (!$dbconn) {
+	if (!$conn) {
     		die("Error");
 	} else {
-		echo "OK OK";
+		//echo "OK OK";
 	}
 
-
 	// Close connection
-	pg_close($dbconn);
+	//pg_close($conn);
 ?>

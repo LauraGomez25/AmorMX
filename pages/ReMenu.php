@@ -54,7 +54,7 @@
         <div class="container">
             <section class="main-section">
 
-                <form action="show.php" method="post">
+                <form action="GuardarMenu.php" method="post" enctype="multipart/form-data">
 
                 <h2>Registrar Menu</h2>
                 <hr><br>
@@ -63,7 +63,7 @@
 
                 <div class="field">
                     <label for="name">Categoria:</label>
-                    <input type="text" name="name" id="name" required>
+                    <input type="text" name="categoria" id="name" required>
                 </div><br>
 
                 <div class="field">
@@ -73,7 +73,7 @@
                     <div class="vista-previa">
                         <img id="vista_previa" src="#" alt="Vista Previa de la Imagen"
                             style="max-width: 300px; max-height: 300px;">
-                    </div>s
+                    </div>
 
                     
 

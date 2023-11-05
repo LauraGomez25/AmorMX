@@ -1,3 +1,65 @@
+<?php
+    require('../conexion.php');
+
+    session_start();
+
+    if(isset($_SESSION["id_usuario"])) {
+		header("Location: Administrador.php");
+	}
+
+    if(!empty($_POST)){
+        $ced = $_POST['dni'];
+        $pass = $_POST['pass'];
+
+        // Prepare query
+        $sql = "select * from Usuarios where cedula = '$ced' and contrasena = '$pass'";
+        // Execute sql
+        $result = pg_query($conn, $sql);
+
+        if (!$result) {
+            die("Error al ejecutar la consulta.");
+        }
+
+        //$rows = $result->num_rows;
+        $rows = pg_num_rows($result);
+        if($rows > 0) {
+            while ($row = pg_fetch_assoc($result)) {
+                // $row contiene los datos de cada fila
+                $_SESSION['id_usuario'] = $row['id'];
+                $_SESSION['nombres'] = $row['nombre_completo'];
+                $_SESSION['cedula'] = $row['cedula'];
+
+                $tipoUsuario = $row['id_tipo_usuario'];
+            }
+
+            switch ($tipoUsuario) {
+                case 1:
+                    header("Location: Administrador.php");   
+                    break;
+                case 2:
+                    header("Location: Mesero.php");   
+                    break;
+                case 3:
+                    header("Location: Chef.php");   
+                    break;
+                case 4:
+                    header("Location: Cajero.php");   
+                    break;
+            }
+
+            
+        } else {
+            echo "<script>alert('Datos incorrectos');</script>";
+            //header("Refresh:0;url=http://localhost/AmorMX/pages/Acceso.php");
+        }
+        
+        // Cierra la conexión
+        pg_close($conn);
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,14 +116,14 @@
         <div class="container">
             <section class="main-section">
 
-                <form action="show.php" method="post">
+                <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
 
                  <h2>Acceso</h2>
                  <hr><br>
 
                     <div class="field">
                         <label for="id">Identificacion:</label>
-                        <input type="number" name="id" id="id" required>
+                        <input type="number" name="dni" id="id" required>
                     </div><br>
 
      

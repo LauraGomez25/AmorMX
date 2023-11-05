@@ -1,3 +1,14 @@
+<?php
+    require('../conexion.php');
+
+    session_start();
+
+    if(!isset($_SESSION["id_usuario"])) {
+		header("Location: Acceso.php");
+	}
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -45,9 +56,10 @@
             </a></li>
 
 
-        <li class="right"><a href="pages/pendiente.html" class="icon-link">
-                <i class="fa-solid fa-user"></i>
-                Admin</a></li>
+            <li class="right">
+            <a href="cerrar_sesion.php" class="icon-link">
+                <i class="fa-solid fa-right-to-bracket" ></i>
+                Log out</a></li>
     </ul>
 
 
