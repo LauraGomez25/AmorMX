@@ -565,6 +565,10 @@ input[type="date"] {
     font-size: 16px;
 }
 
+input[type="radio"] {
+    text-align: center;
+}
+
 
 .boton {
 

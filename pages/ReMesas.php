@@ -59,8 +59,11 @@
                     <hr><br>
 
                     <div class="field">
-                        <label for="name">Nombre Mesas:</label>
-                        <input type="text" name="name" id="name" required>
+                    <label for="gender"></label>
+                    <input type="radio" value="m" name="gender" id="gender_1">
+                    Mesa
+                    <input type="radio" value="m" name="gender" id="gender_2">
+                    Karaoke
                     </div><br>
 
                     <div class="boton">
