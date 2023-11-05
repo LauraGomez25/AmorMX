@@ -36,18 +36,19 @@
 
 
     <ul class="menu">
-        <li class="left"><a href="../Index.html">
-                <i class="fas fa-home" style="color: #000000;"></i>
+        <li class="left"><a href="../Index.html"class="icon-link">
+                <i class="fas fa-home" ></i>
                 Home
             </a></li>
 
 
-        <li class="right"><a href="../pages/Administrador.php">
-                <i class="fa-solid fa-right-to-bracket" style="color: #000000;"></i>
-                Admin</a></li>
+            <li class="left"><a href="../Administrador.php"class="icon-link">
+                <i class="fas fa-home" ></i>
+                Admin
+            </a></li>
     </ul>
 
-    <div id="home" class="main-container">
+    <div id="services" class="main-container">
         <div class="container">
             <section class="main-section">
 

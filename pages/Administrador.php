@@ -56,56 +56,65 @@
 
 
 
-    <div id="services" class="main-content">
-                    <section class="main-section">
-                    <h2>Registros</h2>
-                    <hr>
-                    <ul class="services-list">
-                        <li class="service">
-                            <a href="../pages/ReEmpleados.php">
-                                <div class="service-content">
-                                    <p>Registrar Empleado</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="service">
-                            <a href="../pages/ReMenu.php">
-                                <div class="service-content">
-                                    <p>Registrar Menu</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="service">
-                            <a href="../pages/ReMesas.php">
-                                <div class="service-content">
-                                    <p>Registrar Mesas</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="service">
-                            <a href="../pages/RePlato.php">
-                                <div class="service-content">
-                                    <p>Registrar Plato</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+    <div class="main-content">
+        <section class="main-section">
+            <h2>Registros</h2>
+            <hr>
+            <ul class="services-list">
+                <li class="service">
+                    <a href="../pages/ReEmpleados.php">
+                        <div class="service-content">
+                            <p>Registrar Empleado</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="service">
+                    <a href="../pages/ReMenu.php">
+                        <div class="service-content">
+                            <p>Registrar Menu</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="service">
+                    <a href="../pages/ReMesas.php">
+                        <div class="service-content">
+                            <p>Registrar Mesas</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="service">
+                    <a href="../pages/RePlato.php">
+                        <div class="service-content">
+                            <p>Registrar Plato</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </section>
-
-
-
         <section class="main-section">
             <h2>Otras Opciones Administrativas</h2>
             <hr>
             <ul class="services-list">
                 <li class="service">
-                    <p>Caja</p>
+                    <a href="Mesero.php">
+                        <div class="service-content">
+                            <p>Mesero</p>
+                        </div>
+                    </a>
                 </li>
                 <li class="service">
-                    <p>Domicilios</p>
+                    <a href="Chef.php">
+                        <div class="service-content">
+                            <p>Chef</p>
+                        </div>
+                    </a>
                 </li>
                 <li class="service">
-                    <p>Configuracion</p>
+                    <a href="Cajero.php">
+                        <div class="service-content">
+                            <p>Cajero</p>
+                        </div>
+                    </a>
                 </li>
             </ul>
         </section>
