@@ -37,14 +37,14 @@
 
 
     <ul class="menu">
-        <li class="left"><a href="../Index.html">
-                <i class="fas fa-home" style="color: #000000;"></i>
+        <li class="left"><a href="../Index.html" class="icon-link">
+                <i class="fas fa-home"></i>
                 Home
             </a></li>
 
 
-        <li class="right"><a href="../pages/Administrador.php">
-                <i class="fa-solid fa-right-to-bracket" style="color: #000000;"></i>
+        <li class="right"><a href="../pages/Administrador.php" class="icon-link">
+                <i class="fa-solid fa-right-to-bracket"></i>
                 Admin</a></li>
     </ul>
 

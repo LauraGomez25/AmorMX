@@ -220,25 +220,16 @@ ul.menu li ul li:hover a {
 
 .claseA {
     animation: animar 1s ease-out forwards;
-
 }
 
 @keyframes animar {
     0% {
-        transform: scale(0, 0) translate(0, 0);
-        top: 150px;
-        left: auto;
+        transform: scale(0, 0)  translateX(0px) translateY(0);
     }
-
     100% {
-        transform: scale(1, 1) translate(0, 80px);
-        top: 0;
+        transform: scale(1, 1) translateX(20px) translateY(-150px); /* Ajusta el valor de translateY */
     }
 }
-
-
-
-
 
 
 

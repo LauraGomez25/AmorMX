@@ -39,14 +39,14 @@
 
 
     <ul class="menu">
-        <li class="left"><a href="../Index.html">
-                <i class="fas fa-home" style="color: #000000;"></i>
+        <li class="left"><a href="../Index.html" class="icon-link">
+                <i class="fas fa-home"></i>
                 Home
             </a></li>
 
 
-        <li class="right"><a href="pages/pendiente.html">
-                <i class="fa-solid fa-user" style="color: #000000;"></i>
+        <li class="right"><a href="pages/pendiente.html" class="icon-link">
+                <i class="fa-solid fa-user"></i>
                 Admin</a></li>
     </ul>
 
