@@ -60,22 +60,22 @@
                 
                  <div class="field">
                     <label for="name">Nombre del Plato:</label>
-                    <input type="text" name="name" id="name" required>
+                    <label for="id">Predeterminado</label>
                 </div><br>
 
                 <div class="field">
                     <label for="id">Numero de mesa:</label>
-                    <input type="number" name="id" id="id" required>
+                    <label for="id">Predeterminado</label>
                 </div><br>
 
                  <div class="field">
                     <label for="id">Cantidad:</label>
-                    <input type="number" name="id" id="id" required>
+                    <label for="id">Predeterminado</label>
                 </div>
 
                 <div class="field">
                     <label for="id">Total a pagar:</label>
-                    <input type="number" name="id" id="id" required>
+                    <label for="id">Predeterminado</label>
                 </div><br>
 
                 <div class="field">
