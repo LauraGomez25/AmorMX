@@ -1,15 +1,16 @@
 <?php
-    require('../conexion.php');
+require('../conexion.php');
 
-    session_start();
+session_start();
 
-    if(!isset($_SESSION["id_usuario"])) {
-		header("Location: Acceso.php");
-	}
+if (!isset($_SESSION["id_usuario"])) {
+    header("Location: Acceso.php");
+}
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -20,6 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
+
 <body>
     <header>
         <div class="image-container">
@@ -47,44 +49,80 @@
 
     <ul class="menu">
         <li class="left"><a href="" class="icon-link">
-                <i class="fas fa-home" ></i>
+                <i class="fas fa-home"></i>
                 Mesero
             </a></li>
 
 
-            <li class="right">
+        <li class="right">
             <a href="cerrar_sesion.php" class="icon-link">
-                <i class="fa-solid fa-right-to-bracket" ></i>
-                Log out</a></li>
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Log out</a>
+        </li>
     </ul>
-    
+
     <div id="home" class="main-container">
         <div class="container">
             <section class="main-section">
 
-                <form action="show.php" method="post">
+                <form action="../conexion.php" method="POST">
 
-                 <h2>Mesas</h2>
-                 <hr><br>
+                    <h2>Mesas</h2>
+                    <hr><br>
+                    <label>Mesa</label>
+                    <?php
+                    require('../conexion.php');
 
+                    // Prepare query
+                    $sql = "select * from mesas where nombre_tipo='Mesa'";
+                    // Execute sql
+                    $result = pg_query($conn, $sql);
 
-                 <div class="field">
-                    <label for="gender"></label>
-                    <input type="radio" value="m" name="gender" id="gender_1">
-                    Mesa1
-                    <input type="radio" value="m" name="gender" id="gender_2">
-                    Mesa2
-                    <input type="radio" value="m" name="gender" id="gender_3">
-                    Mesa3
-                </div><br>
+                    if (!$result) {
+                        die("Error al ejecutar la consulta.");
+                    }
+
+                    $rows = pg_num_rows($result);
+                    if ($rows > 0) {
+                        while ($row = pg_fetch_assoc($result)) {
+                            echo '<input type="radio" name="tipo" value="' . $row["nombre_tipo"] . '">' . $row["numero_mesa"] . '</input>';
+                        }
+                    }
+                    ?>
+
+                   <!-- <label>Karaoke</label> -->
+                    
+                   <?php
+                   /*
+                    require('../conexion.php');
+                    $sql = "select * from mesas where nombre_tipo='Karaoke'";
+                   
+                    $result = pg_query($conn, $sql);
+
+                    if (!$result) {
+                        die("Error al ejecutar la consulta.");
+                    }
+
+                    $rows = pg_num_rows($result);
+                    if ($rows > 0) {
+                        while ($row = pg_fetch_assoc($result)) {
+                            echo '<input type="radio" name="tipo2" value="' . $row["nombre_tipo"] . '">' . $row["numero_mesa"] . '</input>';
+                        }
+                    }
+                    */
+                    ?> 
+
+                    <br>
+                    <br>
+
 
 
                     <div class="boton">
                         <button type="submit"><a href="../pages/PedirPlatoM.php">Agregar Pedido</a></button>
                     </div>
 
-  
-                
+
+
 
                 </form>
 
@@ -92,4 +130,5 @@
         </div>
 
 </body>
+
 </html>

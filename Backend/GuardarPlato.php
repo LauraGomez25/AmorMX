@@ -6,7 +6,7 @@
     //recuperar la informacion del formulario html ReEmpleados
     $nombre = $_POST['nombre'];
     $precio = $_POST['precio'];
-    $categoria = $_GET['categoria'];
+    $categoria = $_POST['categoria'];
     
     // Procesa la imagen
     $rutaCarpeta = "../fotos/";
@@ -15,7 +15,8 @@
 
 
     //preparar sql
-    $sql = "select into platos(id_categoria, nombre, precio, ruta) values('$categoria','$nombre','$precio','$rutaImagen');";
+    $sql = "insert into platos(id_categoria, nombre, precio, ruta) 
+    values('$categoria','$nombre','$precio','$rutaImagen');";
 
      // Execute sql
      $result = pg_query($conn, $sql);

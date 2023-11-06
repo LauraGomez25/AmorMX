@@ -53,17 +53,18 @@
         <div class="container">
             <section class="main-section">
 
-                <form action="show.php" method="post">
+                <form action="../Backend/GuardarMesas.php" method="POST">
 
                     <h2>Mesas</h2>
                     <hr><br>
 
                     <div class="field">
                     <label for="gender"></label>
-                    <input type="radio" value="m" name="gender" id="gender_1">
+                    <input type="radio" value="Mesa" name="nombre_tipo" id="Mesa">
                     Mesa
-                    <input type="radio" value="m" name="gender" id="gender_2">
-                    Karaoke
+                    <!-- <input type="radio" value="Karaoke" name="nombre_tipo" id="Karaoke">
+                    Karaoke -->
+
                     </div><br>
 
                     <div class="boton">

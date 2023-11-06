@@ -12,6 +12,7 @@ body {
     width: 200px;
     margin: 0 auto;
     display: block;
+    z-index: 1000;
 }
 
 header {

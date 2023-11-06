@@ -1,6 +1,7 @@
 <!DOCTYPE html>
- <html>
- <head>
+<html>
+
+<head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Registro Plato</title>
@@ -9,8 +10,9 @@
     <script src='../main.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
- </head>
- <body>
+</head>
+
+<body>
     <header>
         <div class="image-container">
             <img src="../images/logo pdf blanco-05.png" alt="Imagen 1" class="logo">
@@ -36,7 +38,7 @@
 
 
     <ul class="menu">
-    <li class="left"><a href="" class="icon-link">
+        <li class="left"><a href="" class="icon-link">
                 <i class="fas fa-home"></i>
                 Administrador
             </a></li>
@@ -46,38 +48,60 @@
                 <i class="fa-solid fa-right-to-bracket"></i>
                 Salir</a></li>
     </ul>
-    
+
 
 
     <div id="services" class="main-container">
         <div class="container">
             <section class="main-section">
 
-                <form action="GuardarPlato.php" method="POST">
+                <form action="../Backend/GuardarPlato.php" method="POST">
 
-                
-                <h2>Registro Plato</h2>
-                 <hr><br>
 
-                
-                 <div class="field">
-                    <label for="name">Nombre:</label>
-                    <input type="text" name="name" id="name" required>
-                </div><br>
+                    <h2>Registro Plato</h2>
+                    <hr><br>
 
-                <div class="field">
-                    <label for="id">Precio:</label>
-                    <input type="number" name="id" id="id" required>
-                </div><br>
 
-                 <div class="field">
-                    <label for="Tipo">Categoria:</label>
-                    <select type="select" name="tipo" id="Tipo" required>
-                        <option value="">Seleccione</option>
-                    </select>
-                </div>
+                    <div class="field">
+                        <label for="name">Nombre:</label>
+                        <input type="text" name="nombre" id="name" required>
+                    </div><br>
 
-                <div class="field">
+                    <div class="field">
+                        <label for="id">Precio:</label>
+                        <input type="number" name="precio" id="id" required>
+                    </div><br>
+
+                    <div class="field">
+                        <label for="Tipo">Categoria:</label>
+                        <select type="select" name="categoria" id="Tipo" required>
+                            <option value="">Seleccione</option>
+
+                            <?php
+                            require('../conexion.php');
+
+                            // Prepare query
+                            $sql = "select * from categorias";
+                            // Execute sql
+                            $result = pg_query($conn, $sql);
+
+                            if (!$result) {
+                                die("Error al ejecutar la consulta.");
+                            }
+
+                            //$rows = $result->num_rows;
+                            $rows = pg_num_rows($result);
+                            if ($rows > 0) {
+                                while ($row = pg_fetch_assoc($result)) {
+                                    echo '<option value="' . $row["nombre_categoria"] . '">' . $row["nombre_categoria"] . '</option>';
+                                }
+                            }
+                            ?>
+
+                        </select>
+                    </div>
+
+                    <div class="field">
                         <label for="Tipo">Imagen:</label>
                         <input type="file" name="fil_foto" id="fil_foto" onchange="mostrarVistaPrevia()">
                     </div>
@@ -97,5 +121,6 @@
     </div>
 
 
- </body>
- </html>
+</body>
+
+</html>

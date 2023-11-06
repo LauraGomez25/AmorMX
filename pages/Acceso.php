@@ -75,6 +75,7 @@
     <header>
         <div class="image-container">
             <img src="../images/logo pdf blanco-05.png" alt="Imagen 1" class="logo">
+
             <img src="../images/VD-removebg-preview.png" alt="Imagen 4" class="effect-4">
             <img src="../images/VD-removebg-preview.png" alt="Imagen 5" class="effect-5">
             <img src="../images/VD-removebg-preview.png" alt="Imagen 6" class="effect-6">
