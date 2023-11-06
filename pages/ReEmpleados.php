@@ -86,8 +86,12 @@
      
                     <div class="field">
                         <label for="pass">Contraseña:</label>
-                        <input type="password" name="pass" id="pass" required>
-                    </div><br>
+                        <div class="password-container">
+                          <i id="toggle-password" class="fa-solid fa-eye-slash"
+                           style="color: #8c8388; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
+                          <input type="password" name="pass" id="pass" required>
+                        </div>
+                      </div><script src="../main.js"></script><br>
 
                     <div class="field">
                         <label for="Tipo">Rol:</label>
