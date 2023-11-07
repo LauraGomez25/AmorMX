@@ -52,29 +52,71 @@
         <div class="container">
             <section class="main-section">
 
-                <form action="show.php" method="post">
+                <form action="../Backend/PedirPlato.php" method="POST">
 
-                    <h2>Pedir PlatoM</h2>
+                    <h2>Pedir Plato</h2>
                     <hr><br>
 
                     <div class="field">
                         <label for="Tipo">Tipo de plato:</label>
-                        <select type="Tipo" name="tipo" id="Tipo" required>
+                        <select type="Tipo" name="categoria" id="Tipo" required>
                             <option value="Seleccione">Seleccione</option>
+                            <?php
+                            require('../conexion.php');
+
+                            // Prepare query
+                            $sql = "select * from categorias";
+                            // Execute sql
+                            $result = pg_query($conn, $sql);
+
+                            if (!$result) {
+                                die("Error al ejecutar la consulta.");
+                            }
+
+                            //$rows = $result->num_rows;
+                            $rows = pg_num_rows($result);
+                            if ($rows > 0) {
+                                while ($row = pg_fetch_assoc($result)) {
+                                    echo '<option value="' . $row["nombre_categoria"] . '">' . $row["nombre_categoria"] . '</option>';
+                                }
+                            }
+                            ?>
+
                         </select>
                     </div>
 
                     <div class="field">
                         <label for="Tipo">Nombre del plato:</label>
-                        <select type="Tipo" name="tipo" id="Tipo" required>
+                        <select type="Tipo" name="nombre" id="Tipo" required>
                             <option value="Seleccione">Seleccione</option>
+
+                            <?php
+                            require('../conexion.php');
+
+                            // Prepare query
+                            $sql = "select * from platos";
+                            // Execute sql
+                            $result = pg_query($conn, $sql);
+
+                            if (!$result) {
+                                die("Error al ejecutar la consulta.");
+                            }
+
+                            //$rows = $result->num_rows;
+                            $rows = pg_num_rows($result);
+                            if ($rows > 0) {
+                                while ($row = pg_fetch_assoc($result)) {
+                                    echo '<option value="' . $row["nombre"] . '">' . $row["nombre"] . '</option>';
+                                }
+                            }
+                            ?>
                         </select>
                     </div>
 
                          
                     <div class="field">
                         <label for="number">Cantidad de platos:</label>
-                        <input type="number" name="number" id="number" required>
+                        <input type="number" name="cantidad" id="number" required>
                     </div><br>
 
                     <div class="boton">
