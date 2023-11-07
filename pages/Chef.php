@@ -22,7 +22,7 @@
 
 </head>
 <body>
-    <header>
+
         <header>
             <div class="image-container">
                 <img src="../images/logo pdf blanco-05.png" alt="Imagen 1" class="logo">

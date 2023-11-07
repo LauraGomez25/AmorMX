@@ -27,7 +27,8 @@
             echo "<script>alert('Registro exitoso');</script>";
             header("Refresh:0;url=http://localhost/AmorMX/pages/Administrador.php");
         } else {
-            echo "Error al subir la imagen.";
+            echo "<script>alert('No ha seleccionado una imagen.');</script>";
+            header("Refresh:0;url=http://localhost/AmorMX/pages/ReMenu.php");
         }
 
     }  
