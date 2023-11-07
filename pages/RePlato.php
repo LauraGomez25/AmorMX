@@ -55,7 +55,8 @@
         <div class="container">
             <section class="main-section">
 
-                <form action="../Backend/GuardarPlato.php" method="POST">
+            <form action="../Backend/GuardarPlato.php" method="POST" enctype="multipart/form-data">
+
 
 
                     <h2>Registro Plato</h2>
